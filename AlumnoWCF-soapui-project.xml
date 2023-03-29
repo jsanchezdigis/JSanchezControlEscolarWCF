@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d6a194ac-9017-46e1-8071-a86a6b61bde5" activeEnvironment="Default" name="AlumnoWCF" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c0f25d45-914c-4fc4-8faf-4a0e1325910e" wsaVersion="NONE" name="BasicHttpBinding_IAlumno" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IAlumno" soapVersion="1_1" anonymous="optional" definition="http://localhost:65276/Alumno.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:65276/Alumno.svc?wsdl"><con:part><con:url>http://localhost:65276/Alumno.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Alumno" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:65276/Alumno.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://localhost:65276/Alumno.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:65276/Alumno.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ML"/>
+      <xsd:import schemaLocation="http://localhost:65276/Alumno.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xsd:import schemaLocation="http://localhost:65276/Alumno.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAlumno_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add"/>
+  </wsdl:message>
+  <wsdl:message name="IAlumno_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAlumno_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update"/>
+  </wsdl:message>
+  <wsdl:message name="IAlumno_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAlumno_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete"/>
+  </wsdl:message>
+  <wsdl:message name="IAlumno_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAlumno_GetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAll"/>
+  </wsdl:message>
+  <wsdl:message name="IAlumno_GetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAlumno_GetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetById"/>
+  </wsdl:message>
+  <wsdl:message name="IAlumno_GetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IAlumno">
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlumno/Add" message="tns:IAlumno_Add_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlumno/AddResponse" message="tns:IAlumno_Add_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlumno/Update" message="tns:IAlumno_Update_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlumno/UpdateResponse" message="tns:IAlumno_Update_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlumno/Delete" message="tns:IAlumno_Delete_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlumno/DeleteResponse" message="tns:IAlumno_Delete_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlumno/GetAll" message="tns:IAlumno_GetAll_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlumno/GetAllResponse" message="tns:IAlumno_GetAll_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlumno/GetById" message="tns:IAlumno_GetById_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlumno/GetByIdResponse" message="tns:IAlumno_GetById_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAlumno" type="tns:IAlumno">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/IAlumno/Add" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/IAlumno/Update" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IAlumno/Delete" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <soap:operation soapAction="http://tempuri.org/IAlumno/GetAll" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <soap:operation soapAction="http://tempuri.org/IAlumno/GetById" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Alumno">
+    <wsdl:port name="BasicHttpBinding_IAlumno" binding="tns:BasicHttpBinding_IAlumno">
+      <soap:address location="http://localhost:65276/Alumno.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:65276/Alumno.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://localhost:65276/Alumno.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ML"/>
+  <xs:element name="Add">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="alumno" nillable="true" type="q1:Alumno" xmlns:q1="http://schemas.datacontract.org/2004/07/ML"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddResult" nillable="true" type="q2:Result" xmlns:q2="http://schemas.datacontract.org/2004/07/ML"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="alumno" nillable="true" type="q3:Alumno" xmlns:q3="http://schemas.datacontract.org/2004/07/ML"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateResult" nillable="true" type="q4:Result" xmlns:q4="http://schemas.datacontract.org/2004/07/ML"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="alumno" nillable="true" type="q5:Alumno" xmlns:q5="http://schemas.datacontract.org/2004/07/ML"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteResult" nillable="true" type="q6:Result" xmlns:q6="http://schemas.datacontract.org/2004/07/ML"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAll">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllResult" nillable="true" type="q7:Result" xmlns:q7="http://schemas.datacontract.org/2004/07/ML"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdAlumno" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetByIdResult" nillable="true" type="q8:Result" xmlns:q8="http://schemas.datacontract.org/2004/07/ML"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:65276/Alumno.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ML" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/ML">
+  <xs:import schemaLocation="http://localhost:65276/Alumno.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:import schemaLocation="http://localhost:65276/Alumno.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System"/>
+  <xs:complexType name="Alumno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alumnos" nillable="true" type="q1:ArrayOfanyType" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IdAlumno" type="xs:int"/>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Alumno" nillable="true" type="tns:Alumno"/>
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Correct" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Exception" nillable="true" type="q2:Exception" xmlns:q2="http://schemas.datacontract.org/2004/07/System"/>
+      <xs:element minOccurs="0" name="Object" nillable="true" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="Objects" nillable="true" type="q3:ArrayOfanyType" xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:65276/Alumno.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOfanyType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfanyType" nillable="true" type="tns:ArrayOfanyType"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:65276/Alumno.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/System" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:import schemaLocation="http://localhost:65276/Alumno.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##local" processContents="skip"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:FactoryType"/>
+  </xs:complexType>
+  <xs:element name="Exception" nillable="true" type="tns:Exception"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:65276/Alumno.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:65276/Alumno.svc</con:endpoint></con:endpoints><con:operation id="a6355fdb-5127-4ec9-90a5-417ef23d7ffd" isOneWay="false" action="http://tempuri.org/IAlumno/Add" name="Add" bindingOperationName="Add" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cee980e7-5930-4ba5-85c8-ff8c881e1b34" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:65276/Alumno.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ml="http://schemas.datacontract.org/2004/07/ML" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Add>\r
+         <!--Optional:-->\r
+         <tem:alumno>\r
+            <!--Optional:-->\r
+            <ml:ApellidoMaterno>Lopez</ml:ApellidoMaterno>\r
+            <!--Optional:-->\r
+            <ml:ApellidoPaterno>Mendez</ml:ApellidoPaterno>\r
+            <!--Optional:-->\r
+            <ml:Nombre>Luis</ml:Nombre>\r
+         </tem:alumno>\r
+      </tem:Add>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IAlumno/Add"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0594ad68-0d64-4234-9af2-f62cd472c46e" isOneWay="false" action="http://tempuri.org/IAlumno/Delete" name="Delete" bindingOperationName="Delete" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6a4f934f-9da1-4365-8698-eb9a5fb00668" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:65276/Alumno.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ml="http://schemas.datacontract.org/2004/07/ML" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Delete>\r
+         <!--Optional:-->\r
+         <tem:alumno>\r
+            <!--Optional:-->\r
+            <ml:IdAlumno>3</ml:IdAlumno>\r
+         </tem:alumno>\r
+      </tem:Delete>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IAlumno/Delete"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="18547fc2-d370-4ad0-83eb-becaf2ff0c37" isOneWay="false" action="http://tempuri.org/IAlumno/GetAll" name="GetAll" bindingOperationName="GetAll" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c96cd8a6-1261-40b2-987e-1c0249c1da71" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:65276/Alumno.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetAll/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IAlumno/GetAll"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="9f621c36-69f9-4dc6-bdb9-f246bcb6f9d5" isOneWay="false" action="http://tempuri.org/IAlumno/GetById" name="GetById" bindingOperationName="GetById" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e886b0f7-394a-4edf-9686-c8f2f76f3a17" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:65276/Alumno.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetById>\r
+         <!--Optional:-->\r
+         <tem:IdAlumno>3</tem:IdAlumno>\r
+      </tem:GetById>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IAlumno/GetById"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="34a560e2-ce56-480b-8362-450728cd61bd" isOneWay="false" action="http://tempuri.org/IAlumno/Update" name="Update" bindingOperationName="Update" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="99ff2d92-f9f7-48af-8771-5c2a33840945" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:65276/Alumno.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ml="http://schemas.datacontract.org/2004/07/ML" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Update>\r
+         <!--Optional:-->\r
+         <tem:alumno>\r
+            <!--Optional:-->\r
+            <ml:ApellidoMaterno>lopez</ml:ApellidoMaterno>\r
+            <!--Optional:-->\r
+            <ml:ApellidoPaterno>Diaz</ml:ApellidoPaterno>\r
+            <!--Optional:-->\r
+            <ml:IdAlumno>3</ml:IdAlumno>\r
+            <!--Optional:-->\r
+            <ml:Nombre>pepe</ml:Nombre>\r
+         </tem:alumno>\r
+      </tem:Update>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IAlumno/Update"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

@@ -1,0 +1,88 @@
+﻿@model ML.AlumnoMateria
+@{
+    ViewBag.Title = "TablaMaterias";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <h2>Materias Alumno</h2>
+    </div>
+    @*Nombre del alumno*@
+    <div class="row">
+        <h2>@Model.Alumno.Nombre @Model.Alumno.ApellidoPaterno @Model.Alumno.ApellidoMaterno</h2>
+    </div>
+
+    <div class="row">
+        <div style="float:right">
+            @Html.ActionLink("Agregar Materia", "TablaMateriasDisponibles", "AlumnoMateria", htmlAttributes: new { @class = "btn btn-success" })
+        </div>
+    </div>
+
+    <div class="row">
+        @if (Model.AlumnoMaterias != null)
+        {
+            //tabla
+            <table class="table table-bordered table-responsive table-hover" id="tblMaterias">
+                <thead>
+                    <tr>
+
+                        <td class="text-center" style=" font-weight:bold;">Materia</td>
+                        <td class="text-center" style=" font-weight:bold;">Costo</td>
+
+                        <td class="text-center" style=" font-weight:bold;">Eliminar</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (ML.AlumnoMateria alumnoMateria in Model.AlumnoMaterias)
+                    {
+                        <tr>
+
+                            <td>@alumnoMateria.Materia.Nombre</td>
+                            <td>@alumnoMateria.Materia.Costo</td>
+
+
+                            <td class="text-center"><a class="glyphicon glyphicon-trash" href="@Url.Action("Delete", "AlumnoMateria", new { IdAlumnoMateria = alumnoMateria.IdAlumnoMateria })" onclick="return confirm('Estas seguro que deseas eliminar este registro?');"></a></td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr class="total">
+                        <th></th>
+                        <th>total</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+
+        }
+        else
+        {
+            <div class="alert alert-danger" role="alert">El alumno no tiene materias O ocurrio un error al realizar la consulta </div>
+        }
+    </div>
+    <div class="form-group">
+        <div class="col-md-3">
+            <div>
+                <div class="input-group">
+                    @Html.ActionLink("Regresar", "GetAllAlumno", "AlumnoMateria", htmlAttributes: new { @class = "btn btn-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@Scripts.Render("~/bundles/jquery")
+<script type="text/javascript">
+
+    for (i = 2; i <= 2; i++) {
+        var total = 0;
+        $('table#tblMaterias tbody td:nth-child(' + i + ')').each(function (index) {
+            total += parseFloat($(this).text());
+        });
+        $('table#tblMaterias tfoot th:nth-child(' + i + ')').text("Total: " + total)
+    }
+</script>
+

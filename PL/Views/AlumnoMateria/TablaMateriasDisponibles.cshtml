@@ -1,0 +1,68 @@
+﻿@model ML.AlumnoMateria
+@{
+    ViewBag.Title = "TablaMateriasDisponibles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <h2>Materias Disponibles</h2>
+    </div>
+
+    <div class="row">
+        @using (Html.BeginForm("TablaMateriasDisponibles", "AlumnoMateria", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            if (Model.AlumnoMaterias != null)
+            {
+                //tabla
+                <table class="table table-bordered table-responsive table-hover" id="tblUsuario">
+                    <thead>
+                        <tr>
+                            <td class="text-center" style=" font-weight:bold;">Agregar</td>
+
+                            <td class="text-center" style=" font-weight:bold;">Nombre</td>
+                            <td class="text-center" style=" font-weight:bold;">Costo</td>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (ML.AlumnoMateria alumnoMateria in Model.AlumnoMaterias)
+                        {
+                            <tr>
+                                <td class="text-center"><input class="form-check-input" type="checkbox" value=@alumnoMateria.Materia.IdMateria name="AlumnoMaterias"></td>
+
+                                <td>@alumnoMateria.Materia.Nombre</td>
+                                <td>@alumnoMateria.Materia.Costo</td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+
+            }
+            else
+            {
+                <div class="alert alert-danger" role="alert">Ocurrio un error al realizar la consulta </div>
+            }
+
+            <div class="form-group">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa-solid fa-bookmark" style="color:green"></i></span>
+                        <input type="submit" value="Guardar" class="btn btn-success" />
+                    </div>
+                    <div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1"><i class="fa-solid fa-rotate-left" style="color:red"></i></span>
+                            @Html.ActionLink("Regresar", "TablaMaterias", "AlumnoMateria", new { IdAlumno = Model.Alumno.IdAlumno }, htmlAttributes: new { @class = "btn btn-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
